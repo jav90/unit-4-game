@@ -336,6 +336,7 @@ $( document ).ready(function() {
     var battleStatus;
     var winCondition;
     $('.attackButton').click(function(event){
+        $('.hpButton').text("HP: " + hero_pokemon[hero_pokemon_index].stats[0]);
         var attkId = event.target.id;
         console.log("Attk id "+attkId);
         for(let i=1; i<5;i++){
@@ -355,6 +356,7 @@ $( document ).ready(function() {
             $('.winSection').show();
         }
 
+        var originalHP = hero_pokemon[hero_pokemon_index].stats[0];
         if(battleStatus === true){
             console.log("battle status true");
             if(hero_pokemon[hero_pokemon_index].stats[0] === 0){
@@ -364,6 +366,8 @@ $( document ).ready(function() {
                 $('.oppPkmn').show();
                 $('.oppStats').hide();
                 $('.selectYourPlayer').show();
+                $('.oppPkmn').removeClass('fainted');
+                $('.oppPkmn').addClass('alive');
                 gameStart();
                 assignCharacters();
             } else {    
@@ -375,7 +379,7 @@ $( document ).ready(function() {
                 $('.oppPkmn').toggleClass('clickable');
                 $('#oppPkmn').removeClass('selected');
                 battleStatus = false;
-                hero_pokemon[hero_pokemon_index].stats[0] = pCharmeleon.stats[0];
+                hero_pokemon[hero_pokemon_index].stats[0] = originalHP;
             }
         }
     });
@@ -407,18 +411,21 @@ function assignCharacters(){
 }
 
 function gameStart(){
-    pBulbasaur = ("Bulbasaur",1,"Grass",[aTackle, aSludgeBomb, aSeedBomb, aTailWhip],[60,54,54,70,70,50],true,'assets/images/001-Bulbasaur375px.png');
-    pIvysaur = ("Ivysaur",2,"Grass",[aTackle, aQuickAttack, aTailWhip, aVineWhip],[61,67,68,85,85,65],true,'assets/images/002Ivysaur-375px.png');
-    pVenusaur = ("Venusaur",3,"Grass",[aScratch, aGrowl, aTailWhip, aVineWhip],[61,87,88,105,105,85],true, 'assets/images/003Venusaur-375px.png');
-    pCharmander= ("Charmander",4,"Fire",[aScratch, aFlash, aFlamethrower, aTailWhip ],[60,57,48,65,55,70],true,'assets/images/004-Charmander375px.png');
-    pCharmeleon= ("Charmeleon",5,"Fire",[aEmber, aScratch, aFirePunch, aFlash],[61,69,63,85,70,85],true,'assets/images/005-Charmeleon375px.png');
-    pCharizard= ("Charizard",6,"Fire",[aEmber, aScratch, aFlash, aTailWhip],[61,89,83,114,90,105],true,'assets/images/006-Charizard375px.png');
-    pSquirtle= ("Squirtle",7,"Water",[aAquaTail, aHydroPump, aTackle, aTailWhip],[60,53,70,65,59,48],true,'assets/images/007Squirtle-375px.png');
-    pWartortle= ("Wartortle",8,"Water",[aAquaTail, aQuickAttack, aTailWhip, aGrowl],[61,68,85,70,85,63],true,'assets/images/008Wartortle-375px.png');
-    pBlastoise= ("Blastoise",9,"Water",[aWaterGun, aTackle, aTailWhip, aGrowl],[61,88,105,90,110,83],true,'assets/images/009Blastoise-375px.png');
-    pPikachu = ("Pikachu",25,"Electric",[aThunder, aThunderShock, aQuickAttack, aTailWhip],[60,60,35,55,45,95],true,'assets/images/025Pikachu-375px.png');
-    pRaichu= ("Raichu",26,"Electric",[aThunderShock, aQuickAttack, aScratch, aTailWhip],[61,95,60,95,85,105],true,'assets/images/026Raichu-375px.png');
-    pRaichu_alola= ("Alolan Raichu",26,"Electric",[aPsyshock, aThunderShock, aScratch, aTailWhip],[61,95,60,95,85,105],true,'assets/images/026Raichu-Alola-165px.png');
+    
+    pBulbasaur.stats[0] = 60;
+    pIvysaur.stats[0] = 61;
+    pVenusaur.stats[0] = 61;
+    pCharmander.stats[0] = 60;
+    pCharmeleon.stats[0] = 61;
+    pCharizard.stats[0] = 61;
+    pSquirtle.stats[0] = 60;
+    pWartortle.stats[0] = 61;
+    pBlastoise.stats[0] = 61;
+    pPikachu.stats[0] = 60;
+    pRaichu.stats[0] = 61;
+    pRaichu_alola.stats[0] = 61;
+    
+
 }
 
 function statUpdate(number){

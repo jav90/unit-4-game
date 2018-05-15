@@ -1,12 +1,24 @@
 /* Setting body to 100% of the size of the screen */
 body{
+    height: 100%;
     width: 100%;
+    background-color: #da291c;
+}
+
+.titleSection{
+    background-color: lightgrey;
+    padding: 10px;
 }
 
 /* Centers main section and limits the size */
 .mainSection{
-    max-width: 80%;
-    margin: 20px auto auto auto;
+    max-width: 90%;
+    height: 100%;
+    margin: 50px auto;
+    padding: 50px 10px;
+    border: solid black;
+    border-width: 3px;
+    background-color: white;
 }
 
 /* Creates main grid with 3 rows */
@@ -31,6 +43,7 @@ body{
     grid-area: middle;
     grid-template-rows: 50px;
     margin-top: 15px;
+    font-size: auto;
 }
 
 /* Centers the pokemon's image within the div and sets a max height */
@@ -50,7 +63,9 @@ body{
 .pkmnName{
     position: absolute;
     bottom: 0;
-    left: 15%;
+    width: 100%;
+    background-color: lightgray;
+    font-size: 8px;
 }
 
 .infoSectionH, .infoSectionO{
@@ -104,4 +119,19 @@ body{
 
 .fainted{
     display: none;
+}
+
+.wrapper{
+    min-height: 100%;
+    margin: -50px;
+}
+
+footer{
+    display: block;
+    background-color: white;
+    border-top: black solid 3px;
+    position: absolute;
+    bottom: auto;
+    height: 50px;
+    width: 100%;
 }
