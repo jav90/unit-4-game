@@ -9,6 +9,103 @@
     <link rel="stylesheet" src="text/css" href="assets/css/style.css">
 </head>
 <body>
+    <section class="titleSection">
+        <h1 class="title">Pokemon Battle!</h1>
+        <h2 class="subtitle">Which Pokemon will you choose?</h2>
+    </section>
+    <section class="mainSection">
+        <div class="grid">
+            <section class="hero">
+                <div class="heroPkmn" id="heroPkmn1">
+                    <span class="pkmnName">Bulbasaur</span>
+                    <img class="pkmnImage" src="assets/images/001-Bulbasaur375px.png" alt="Bulbasaur">
+                </div>
+                <div class="heroPkmn" id="heroPkmn2">
+                    <span class="pkmnName">Bulbasaur</span>
+                    <img class="pkmnImage" src="assets/images/001-Bulbasaur375px.png" alt="Bulbasaur">
+                </div>
+                <div class="heroPkmn" id="heroPkmn3">
+                    <span class="pkmnName">Bulbasaur</span>
+                    <img class="pkmnImage" src="assets/images/001-Bulbasaur375px.png" alt="Bulbasaur">
+                </div>
+                <div class="heroPkmn" id="heroPkmn4">
+                    <span class="pkmnName">Bulbasaur</span>
+                    <img class="pkmnImage" src="assets/images/001-Bulbasaur375px.png" alt="Bulbasaur">
+                </div>
+                <div class="infoSectionH iSH1">
+                    <ul>
+                        <li class="heroName">Bulbasaur</li>
+                        <li class="heroNumber">001</li>
+                        <li class="heroType">Grass</li>
+                    </ul>
+                </div>
+                <div class="infoSectionH iSH2">
+                    <ul>
+                        <li class="HP">45</li>
+                        <li class="attack">49</li>
+                        <li class="defense">49</li>
+                        <li class="SpAtk">65</li>
+                        <li class="SpDef">65</li>
+                        <li class="Speed">45</li>
+                    </ul>
+                </div>
+                <div class="infoSectionH iSH3">
+                    <ul>
+                        <li class="attack1">Tackle</li>
+                        <li class="attack2">Growl</li>
+                        <li class="attack3">Leech Seed</li>
+                        <li class="attack4">Vine Whip</li>
+                    </ul>
+                </div>
+                <div class="infoSectionH iSH4">
+                    <button class="selectYourPlayer">Select</button>
+                </div> 
+                <section class="attackButtonSection">
+                    <h3 class="hpButton">HP:</h3>    
+                    <button class="attackButton" id="attackButton1">Attack 1</button>
+                    <button class="attackButton" id="attackButton2">Attack 2</button>
+                    <br>    
+                    <button class="attackButton" id="attackButton3">Attack 3</button>
+                    <button class="attackButton" id="attackButton4">Attack 4</button>
+                </section>
+            </section>
+            <section class="middle">
+                VS!
+            </section>
+            <section class="enemy">
+                <div class="oppPkmn alive" id="oppPkmn1">
+                    <span class="pkmnName">Charmander</span>
+                    <img class="pkmnImage" src="assets/images/004-Charmander375px.png" alt="Charmander">
+                </div>
+                <div class="oppPkmn alive" id="oppPkmn2">
+                    <span class="pkmnName">Charmander</span>
+                    <img class="pkmnImage" src="assets/images/004-Charmander375px.png" alt="Charmander">
+                </div>
+                <div class="oppPkmn alive" id="oppPkmn3">
+                    <span class="pkmnName">Charmander</span>
+                    <img class="pkmnImage" src="assets/images/004-Charmander375px.png" alt="Charmander">
+                </div>
+                <div class="oppPkmn alive" id="oppPkmn4">
+                    <span class="pkmnName">Charmander</span>
+                    <img class="pkmnImage" src="assets/images/004-Charmander375px.png" alt="Charmander">
+                </div>
+                <div class="infoSectionO">                
+                    <button class="selectYourOpponent">Select</button>
+                </div>
+                <section class="oppStats">
+                    <h3 class="oppHPButton">HP: </h3>
+                </section>
+            </section>
+        </div>
+    </section>
+    <section class="winSection">
+        <h1 class="winTitles">You win!</h1>
+    </section>
     
+    <script
+			  src="https://code.jquery.com/jquery-3.3.1.min.js"
+			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			  crossorigin="anonymous"></script>
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
 </body>
 </html>

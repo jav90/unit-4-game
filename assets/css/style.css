@@ -1,0 +1,107 @@
+/* Setting body to 100% of the size of the screen */
+body{
+    width: 100%;
+}
+
+/* Centers main section and limits the size */
+.mainSection{
+    max-width: 80%;
+    margin: 20px auto auto auto;
+}
+
+/* Creates main grid with 3 rows */
+.grid {
+    display: grid;
+    grid: "hero" 
+        "middle" 
+        "enemy";
+        grid-template-rows: 2fr 50px 2fr;
+}
+
+/* Creates sub-grids for the hero and enemy categories with four columns */
+.hero, .enemy{
+   display: grid;
+   grid: "1 2 3 4"
+        "5 6 7 8";
+   grid-gap: 0 5px;
+}
+
+/* Sets the middle area to a size and assigns a position on the grid area */
+.middle{
+    grid-area: middle;
+    grid-template-rows: 50px;
+    margin-top: 15px;
+}
+
+/* Centers the pokemon's image within the div and sets a max height */
+.pkmnImage{
+    height: auto;
+    max-width: 50%;
+    min-width: 80px;
+    display: block;
+    margin: auto;
+}
+
+.heroPkmn, .oppPkmn{
+    position: relative;
+    border: solid 1px black;
+}
+
+.pkmnName{
+    position: absolute;
+    bottom: 0;
+    left: 15%;
+}
+
+.infoSectionH, .infoSectionO{
+    display: none;
+}
+
+.iSH1{
+    grid-area: "5";
+}
+.iSH2{
+    grid-area: "6";
+}
+.iSH3{
+    grid-area: "7";
+}
+.iSH4{
+    grid-area: "8";
+}
+
+.selected{
+    border: solid 3px black;
+}
+
+.attackButtonSection{
+    display: none;  
+}
+.attackButton1{
+    grid-column: auto / span 2;
+ }
+ .attackButton2{
+    grid-area: "7";
+}
+.attackButton3{
+    grid-area: "6";
+}
+.attackButton4{
+    grid-area: "7";
+}
+
+.oppStats{
+    display: none;
+}
+
+.winSection{
+    display: none;
+}
+
+.alive{
+    display: show;
+}
+
+.fainted{
+    display: none;
+}
